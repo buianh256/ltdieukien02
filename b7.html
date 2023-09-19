@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 2 Ax<sup>2</sup>+bx+c=0</h1>
+<input type="number" id="number1" placeholder="Nhập a ">a</input> <br>
+<input type="number" id="number2" placeholder="Nhập b">b</input> <br>
+<input type="number" id="number3" placeholder="Nhập c">c</input> <br>
+<button onclick="ketqua()" >tính</button>
+<p id="result">kết quả</p>
+<p id="resultt"></p>
+<script>
+
+    function ketqua() {
+        let a = +document.getElementById("number1").value;
+        let b = +document.getElementById("number2").value;
+        let c = +document.getElementById("number3").value;
+        let x = Math.pow(b,2) - 4*a*c;
+        if (a === 0){
+            document.getElementById("result").innerHTML = "không phải pt bậc 2";
+        }else if (x === 0){
+            document.getElementById("result").innerHTML = (-b)/2*a;
+        }else if (x < 0) {
+            document.getElementById("result").innerHTML = "Phương trình vô nghiệm"
+        }else {
+            document.getElementById("result").innerHTML = (-b-Math.sqrt(x))/(2*a);
+            document.getElementById("resultt").innerHTML = (-b+Math.sqrt(x))/(2*a);
+        }
+    }
+</script>
+</body>
+</html>

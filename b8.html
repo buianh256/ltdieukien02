@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 8</title>
+</head>
+<body>
+<h1>Nhập tuỏi</h1>
+<input type="number" id="age" placeholder="Nhập tuổi">
+<button onclick="submit()">Đổi</button>
+<p id="ketqua"></p>
+<script>
+    function submit() {
+        var age = document.getElementById('age').value;
+        if (age >0 && age < 120){
+            document.getElementById('ketqua').innerHTML = "là tuổi của một người";
+        }else{
+            document.getElementById('ketqua').innerHTML = "không phải tuổi của một ngừoi";
+        }
+    }
+</script>
+</body>
+</html>

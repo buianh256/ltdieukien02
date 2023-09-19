@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+<h1>Tính giá điện</h1>
+<input type="number" id="number" placeholder="Nhập số điện"/>
+<button onclick="ketqua()">Tính giá</button>
+<p id="result"></p>
+<script>
+    function ketqua() {
+        let number = +document.getElementById('number').value;
+        if (number > 0){
+            document.getElementById('result').innerHTML ="Số tiền điện phải thanh toán là " + number * 1678 + " VNĐ";
+        }else if (number > 50){
+            document.getElementById('result').innerHTML ="Số tiền điện phải thanh toán là " + ((50*1678) + ((number-50) * 1734)) + " VNĐ";
+        }else if(number > 100)  {
+            document.getElementById('result').innerHTML ="Số tiền điện phải thanh toán là " + ((50*1678) + (50*1734) + ((number-100) * 2014)) + " VNĐ";
+        }else if(number > 200){
+            document.getElementById('result').innerHTML ="Số tiền điện phải thanh toán là " + ((50*1678) + (50*1734) + (100*2014) + ((number-200) * 2536)) + " VNĐ";
+        }else if(number >300){
+            document.getElementById('result').innerHTML ="Số tiền điện phải thanh toán là " + ((50*1678) + (50*1734) + (100*2014) + (100*2536) + ((number-300) * 2834)) + " VNĐ";
+        }else{
+            document.getElementById('result').innerHTML ="Số tiền điện phải thanh toán là " + ((50*1678) + (50*1734) + (100*2014) + (100*2536) + (100*2834) + ((number-400) * 2937)) + " VNĐ";
+        }
+    }
+</script>
+</body>
+</html>

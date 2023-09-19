@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+<h1>Tính thuế thu nhập cá nhân</h1>
+<input type="number" id="number" placeholder="số thu nhập"/>
+<button onclick="ketqua()">Tính</button>
+<p id="result"></p>
+<script>
+    function ketqua() {
+        let number = +document.getElementById('number').value;
+        if (number >0){
+            document.getElementById('result').innerHTML ="Số thuế phải nộp là " + number* 0.05 + "VNĐ";
+        }else if(number>5000000){
+            document.getElementById('result').innerHTML ="Số thuế phải nộp là " + (number* 0.1 - 250000) + "VNĐ";
+        }else if(number>10000000){
+            document.getElementById('result').innerHTML ="Số thuế phải nộp là " + (number* 0.15 - 750000) + "VNĐ";
+        }else if(number>18000000){
+            document.getElementById('result').innerHTML ="Số thuế phải nộp là " + (number* 0.2 - 1650000) + "VNĐ";
+        }else if(number>32000000){
+            document.getElementById('result').innerHTML ="Số thuế phải nộp là " + (number* 0.25 - 3250000) + "VNĐ";
+        }else if(number>52000000){
+            document.getElementById('result').innerHTML ="Số thuế phải nộp là " + (number* 0.3 - 5850000) + "VNĐ";
+        }else{
+            document.getElementById('result').innerHTML ="Số thuế phải nộp là " + (number* 0.35 - 9850000) + "VNĐ";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h1>Diện tích hình vuông</h1>
+<input type="number" id="a" placeholder="Nhập cạnh">
+<button onclick="submit()">Đổi</button>
+<p id="ketqua"></p>
+<script>
+    function submit() {
+        var a = +document.getElementById('a').value;
+        document.getElementById('ketqua').innerHTML = "Diện tích hình vuông là " + a*a ;
+    }
+</script>
+</body>
+</html>
